@@ -1,0 +1,29 @@
+.devoloper{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 2rem;
+    margin-top: 1rem;
+}
+.devoloper h{
+    font-size: 25px;
+    font-weight: 700;
+}
+.devoloper p{
+}
+.anik{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.anik img{
+    width:12rem;
+    border-radius: 50%;
+}
+.adarsha{
+    text-align: center;
+}
+.adarsha img{
+    width:12rem;
+    border-radius: 50%;
+}
