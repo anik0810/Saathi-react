@@ -1,15 +1,24 @@
-import Devolpers from "./Components/Devolpers";
+import "./Components/CSS/login.css";
+import React, { useState } from "react";
+import NavBar from './Components/Navbar';
+import LoginForm from "./Components/LoginForm";
 import Home from "./Components/Home";
-import Navbar from "./Components/Navbar";
-const darkmode=()=>{
-  document.style.body.backgroundColor='black';
-}
-export default function App(){
-  return(
+import Tool from "./Components/Tool";
+import Guide from "./Components/Guide";
+export default function App() {
+  const [isShowLogin, setIsShowLogin] = useState(true);
+
+  const handleLoginClick = () => {
+    setIsShowLogin((isShowLogin) => !isShowLogin);
+  };
+
+  return (
     <>
-      <Navbar/>
+      <NavBar handleLoginClick={handleLoginClick} />
+      <LoginForm isShowLogin={isShowLogin} />
       <Home/>
-      {/* <Devolpers/> */}
+      <Tool/>
+      <Guide/>
     </>
-  )
+  );
 }

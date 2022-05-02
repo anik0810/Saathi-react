@@ -1,9 +1,11 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
-import './CSS/nav.css'
 
-export default function Navbar() {
+export default function Navbar({ handleLoginClick }) {
+  const handleClick = () => {
+    handleLoginClick();
+  }
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -15,7 +17,7 @@ export default function Navbar() {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav ms-auto mb-2 mb-lg-0 px-3">
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#">Home</a>
+          <a className="nav-link active" aria-current="page">Home</a>
         </li>
         <li className="nav-item">
           <a className="nav-link" href="#">Documentation</a>
@@ -32,10 +34,10 @@ export default function Navbar() {
           </ul>
         </li>
         <li>
-          <a className="nav-link px-2" href="#" >Login</a>
+          <a className="nav-link px-2" href="#">Login</a>
         </li>
         <li>
-          <a className="nav-link" href="#" >Sign Up</a>
+          <a className="nav-link" onClick={handleClick}>Sign Up</a>
         </li>
       </ul>
     </div>
@@ -44,3 +46,4 @@ export default function Navbar() {
     </>
   )
 }
+
